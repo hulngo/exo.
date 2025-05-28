@@ -3,32 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>bbh</title>
+    <title>BBH</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #74ebd5, #acb6e5);
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .box {
+            height: 100px;
+            width: 100px;
+            background-color: #379999;
+            border: 2px solid #000;
+            margin: 10px;
+            text-align: center;
+            line-height: 100px;
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            transition: transform 0.2s ease, background-color 0.3s;
+        }
+
+        .box:hover {
+            background-color: #2d7f7f;
+            transform: scale(1.1);
+        }
+    </style>
 </head>
-<style>
-    body{
-        display: flex;
-        align-items: center;
-    }
-    div{
-        height: 100px;
-        width: 100px;
-        background-color: rgb(55, 153, 153);
-        border-color: rgb(0, 0, 0);
-        margin: 5px;
-        text-align: center;
-
-    }
-</style>
 <body>
-   <a href="ondo.html"> <div>1</div> </a> 
-   <a href="sigmaboy2.html"> <div>2</div> </a> 
-   <a href="sigmaboy3.html"> <div>3</div> </a> 
-   <a href="sigmaboy4.html"> <div>4</div> </a> 
-   <a href="sigmaboy5.html"> <div>5</div> </a> 
-   <a href="sigmaboy6.html"> <div>6</div> </a> 
-   <a href="sigmaboy7.html"> <div>7</div> </a> 
-
-   
+    <a href="ondo.html"><div class="box">1</div></a>
+    <a href="sigmaboy2.html"><div class="box">2</div></a>
+    <a href="sigmaboy3.html"><div class="box">3</div></a>
+    <a href="sigmaboy4.html"><div class="box">4</div></a>
+    <a href="sigmaboy5.html"><div class="box">5</div></a>
+    <a href="sigmaboy6.html"><div class="box">6</div></a>
+    <a href="sigmaboy7.html"><div class="box">7</div></a>
 </body>
 </html>
