@@ -1,54 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BBH</title>
-    <style>
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-wrap: wrap;
-            height: 100vh;
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: linear-gradient(to right, #74ebd5, #acb6e5);
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BBH</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #f6d365, #fda085);
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      font-family: 'Segoe UI', sans-serif;
+    }
 
-        a {
-            text-decoration: none;
-        }
+    .blob-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: center;
+      align-items: center;
+    }
 
-        .box {
-            height: 100px;
-            width: 100px;
-            background-color: #379999;
-            border: 2px solid #000;
-            margin: 10px;
-            text-align: center;
-            line-height: 100px;
-            color: white;
-            font-size: 24px;
-            font-weight: bold;
-            border-radius: 15px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-            transition: transform 0.2s ease, background-color 0.3s;
-        }
+    .blob {
+      position: relative;
+      width: 120px;
+      height: 120px;
+      background: linear-gradient(135deg, #89f7fe, #66a6ff);
+      border-radius: 50% 60% 70% 50% / 60% 50% 70% 40%;
+      transition: all 0.4s ease-in-out;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 26px;
+      color: #fff;
+      font-weight: bold;
+      cursor: pointer;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+      animation: blobMove 6s infinite ease-in-out;
+      text-decoration: none;
+    }
 
-        .box:hover {
-            background-color: #2d7f7f;
-            transform: scale(1.1);
-        }
-    </style>
+    .blob:hover {
+      transform: scale(1.15);
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+    }
+
+    @keyframes blobMove {
+      0%, 100% {
+        border-radius: 50% 60% 70% 50% / 60% 50% 70% 40%;
+      }
+      33% {
+        border-radius: 60% 50% 40% 70% / 50% 60% 40% 60%;
+      }
+      66% {
+        border-radius: 70% 40% 60% 50% / 60% 70% 50% 40%;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .blob {
+        width: 90px;
+        height: 90px;
+        font-size: 20px;
+      }
+    }
+  </style>
 </head>
 <body>
-    <a href="ondo.html"><div class="box">1</div></a>
-    <a href="sigmaboy2.html"><div class="box">2</div></a>
-    <a href="sigmaboy3.html"><div class="box">3</div></a>
-    <a href="sigmaboy4.html"><div class="box">4</div></a>
-    <a href="sigmaboy5.html"><div class="box">5</div></a>
-    <a href="sigmaboy6.html"><div class="box">6</div></a>
-    <a href="sigmaboy7.html"><div class="box">7</div></a>
+  <div class="blob-container">
+    <a href="ondo.html" class="blob">1</a>
+    <a href="sigmaboy2.html" class="blob">2</a>
+    <a href="sigmaboy3.html" class="blob">3</a>
+    <a href="sigmaboy4.html" class="blob">4</a>
+    <a href="sigmaboy5.html" class="blob">5</a>
+    <a href="sigmaboy6.html" class="blob">6</a>
+    <a href="sigmaboy7.html" class="blob">7</a>
+  </div>
 </body>
 </html>
